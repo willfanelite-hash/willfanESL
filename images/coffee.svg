@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440">
+  <rect width="800" height="440" fill="#fde8d0"/>
+  <circle cx="660" cy="80" r="120" fill="#fcd9b6"/>
+  <circle cx="120" cy="380" r="150" fill="#fcd9b6"/>
+  <!-- saucer -->
+  <ellipse cx="400" cy="340" rx="170" ry="28" fill="#b45309" opacity="0.3"/>
+  <!-- cup -->
+  <path d="M280 180 L300 320 Q310 345 400 345 Q490 345 500 320 L520 180 Z" fill="#ffffff" stroke="#92400e" stroke-width="6"/>
+  <!-- coffee -->
+  <ellipse cx="400" cy="185" rx="118" ry="22" fill="#78350f"/>
+  <!-- handle -->
+  <path d="M520 200 Q585 205 580 250 Q575 295 505 295" fill="none" stroke="#92400e" stroke-width="14" stroke-linecap="round"/>
+  <!-- steam -->
+  <path d="M360 140 Q350 110 365 90 Q380 70 370 45" fill="none" stroke="#9a3412" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+  <path d="M430 140 Q420 110 435 90 Q450 70 440 45" fill="none" stroke="#9a3412" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+  <text x="400" y="415" font-family="Georgia, serif" font-size="34" fill="#78350f" text-anchor="middle" font-style="italic">A medium latte, please!</text>
+</svg>

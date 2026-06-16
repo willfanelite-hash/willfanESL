@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn English with Will Fan</title>
+<style>
+  :root {
+    --blue: #2563eb;
+    --blue-dark: #1e40af;
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  header {
+    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    color: #fff;
+    padding: 36px 20px 28px;
+    text-align: center;
+  }
+  header img.avatar {
+    width: 220px;
+    height: auto;
+    border-radius: 18px;
+    border: 4px solid rgba(255,255,255,.85);
+    box-shadow: 0 4px 14px rgba(0,0,0,.25);
+    display: block;
+    margin: 0 auto 14px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+  header p { margin: 8px 0 0; opacity: 0.9; font-style: italic; }
+  main { max-width: 760px; margin: 0 auto; padding: 28px 16px 60px; }
+
+  /* ---- post list cards ---- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+  .card img { width: 100%; height: 220px; object-fit: cover; display: block; background: #dbeafe; }
+  .card .body { padding: 18px 22px 20px; }
+  .card h2 { margin: 0 0 6px; font-size: 1.35rem; color: var(--blue-dark); }
+  .meta { font-size: .85rem; color: var(--muted); font-family: Arial, sans-serif; }
+  .level {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: .75rem;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: var(--blue-dark);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .excerpt { margin: 10px 0 0; color: var(--ink); }
+
+  /* ---- single post view ---- */
+  .post {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .post img.hero { width: 100%; max-height: 340px; object-fit: cover; display: block; background: #dbeafe; }
+  .post .body { padding: 26px 30px 34px; }
+  .post h1 { margin: 4px 0 4px; font-size: 1.7rem; color: var(--blue-dark); }
+  .post h2 { color: var(--blue-dark); margin-top: 1.6em; font-size: 1.25rem; }
+  .post h3 { color: var(--blue-dark); margin-top: 1.3em; font-size: 1.05rem; }
+  .post ul, .post ol { padding-left: 1.4em; }
+  .post li { margin: 6px 0; }
+  .post blockquote {
+    margin: 1em 0;
+    padding: 10px 18px;
+    background: #eff6ff;
+    border-left: 4px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+  }
+  .back {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-family: Arial, sans-serif;
+    font-size: .9rem;
+    color: var(--blue);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .back:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="avatar" src="images/will.jpg" alt="Will Fan" onerror="this.style.display='none'">
+  <h1 id="site-title" onclick="location.hash=''">Learn English with Will Fan</h1>
+  <p id="site-tagline">Hello everyone, my name is Will Fan, a fellow ESL student.</p>
+</header>
+
+<main id="app"></main>
+
+<footer>Made with ❤ for English learners</footer>
+
+<script src="posts.js"></script>
+<script>
+/* ============================================================
+   You do NOT need to edit anything below.
+   To add a lesson, edit posts.js only.
+   ============================================================ */
+
+document.getElementById('site-title').textContent = SITE.title;
+document.getElementById('site-tagline').textContent = SITE.tagline;
+document.title = SITE.title;
+
+// Tiny formatter: turns the easy text in posts.js into HTML.
+function format(text) {
+  const lines = text.trim().split('\n');
+  let html = '', inList = false, inBlockquote = false, para = [];
+  const inline = s => s
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>');
+  const flush = () => {
+    if (para.length) { html += '<p>' + para.join(' ') + '</p>'; para = []; }
+  };
+  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+  const closeBlockquote = () => { if (inBlockquote) { html += '</blockquote>'; inBlockquote = false; } };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (line === '') { flush(); closeList(); closeBlockquote(); }
+    else if (line.startsWith('### ')) { flush(); closeList(); closeBlockquote(); html += '<h3>' + inline(line.slice(4)) + '</h3>'; }
+    else if (line.startsWith('## '))  { flush(); closeList(); closeBlockquote(); html += '<h2>' + inline(line.slice(3)) + '</h2>'; }
+    else if (line.startsWith('> '))   { flush(); closeList(); if (!inBlockquote) { html += '<blockquote>'; inBlockquote = true; } else { html += '<br>'; } html += inline(line.slice(2)); }
+    else if (line.startsWith('- '))   { flush(); closeBlockquote(); if (!inList) { html += '<ul>'; inList = true; } html += '<li>' + inline(line.slice(2)) + '</li>'; }
+    else { closeBlockquote(); para.push(inline(line)); }
+  }
+  flush(); closeList(); closeBlockquote();
+  return html;
+}
+
+function niceDate(d) {
+  return new Date(d + 'T00:00:00').toLocaleDateString('en-US',
+    { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function renderList() {
+  const sorted = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
+  document.getElementById('app').innerHTML = sorted.map(p => `
+    <div class="card" onclick="location.hash='post/${p.id}'">
+      <img src="${p.image}" alt="${p.imageAlt || p.title}">
+      <div class="body">
+        <h2>${p.title}</h2>
+        <div class="meta"><span class="level">${p.level}</span>${niceDate(p.date)}</div>
+        <p class="excerpt">${p.excerpt}</p>
+      </div>
+    </div>`).join('');
+}
+
+function renderPost(id) {
+  const p = POSTS.find(x => x.id === id);
+  if (!p) { renderList(); return; }
+  document.getElementById('app').innerHTML = `
+    <a class="back" onclick="location.hash=''">&larr; All lessons</a>
+    <article class="post">
+      <img class="hero" src="${p.image}" alt="${p.imageAlt || p.title}">
+      <div class="body">
+        <div class="meta"><span class="level">${p.level}</span>${niceDate(p.date)}</div>
+        <h1>${p.title}</h1>
+        ${format(p.content)}
+      </div>
+    </article>`;
+  window.scrollTo(0, 0);
+}
+
+function route() {
+  const h = location.hash;
+  if (h.startsWith('#post/')) renderPost(h.slice(6));
+  else renderList();
+}
+window.addEventListener('hashchange', route);
+route();
+</script>
+</body>
+</html>
