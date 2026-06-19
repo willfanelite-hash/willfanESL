@@ -22,6 +22,55 @@ const SITE = {
 const POSTS = [
 
   {
+    id: "lesson-003",
+    date: "2026-06-18",
+    title: "Condolences vs. Condescending 😬",
+    level: "Intermediate",
+    image: "images/x.png",
+    imageAlt: "Screenshot of a tweet where I wrote My condescending instead of My condolences",
+    excerpt: "I wrote \"My condescending\" on a post about someone's death — I meant \"My condolences.\"",
+    content: `
+## My Mistake
+
+Someone I follow on social media posted that a person had passed away. I wanted to show sympathy, so I replied:
+
+> "My condescending I spoke with you guys before Consensus."
+
+I meant to write **"My condolences."** This is a very embarrassing mix-up — here is why:
+
+## The Two Words
+
+**Condolences** *(noun, plural)*
+- Meaning: an expression of sympathy for someone who is grieving
+- How to use it: "My condolences" or "Please accept my condolences"
+- When to say it: when someone has lost a loved one
+
+**Condescending** *(adjective)*
+- Meaning: treating someone as if they are less intelligent or less important than you
+- How to use it: "Don't be condescending" / "She gave me a condescending look"
+- When to say it: to describe rude, superior behaviour — the *opposite* of kind!
+
+## Why This Is So Bad
+
+Saying **"My condescending"** at a moment of grief sounds like you are insulting the person. It is the opposite of what I wanted to say! Always double-check before posting.
+
+## How to Remember Them
+
+- **condolences** → think of **"console"** — you are trying to comfort someone
+- **condescending** → think of **"descend"** — looking *down* on someone
+
+## Practice
+
+Fill in the blank with the right word:
+
+1. "I am so sorry for your loss. Please accept my ___."
+2. "He spoke in a very ___ tone, as if we didn't understand anything."
+
+**Tip:** Autocorrect and rushing are dangerous. Read your message once before you hit send — especially when the topic is serious!
+`
+  },
+
+  {
     id: "lesson-002",
     date: "2026-06-10",
     title: "At the Coffee Shop ☕",
