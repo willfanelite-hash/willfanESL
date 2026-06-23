@@ -22,6 +22,67 @@ const SITE = {
 const POSTS = [
 
   {
+    id: "lesson-004",
+    date: "2026-06-22",
+    title: "\"Reminds me of me\" — Really? 😬",
+    level: "Beginner",
+    image: "images/post2.png",
+    imageAlt: "Tweet where Will Fan wrote: Ne Zha 2 reminds me of me when I was young",
+    excerpt: "I wrote \"reminds me of me\" — which sounds ridiculous. The word I needed was \"myself.\"",
+    content: `
+## What I Said
+
+I posted this on social media:
+
+> "Ne Zha 2 reminds me of me when I was young 🤣"
+
+Let me be honest with you: this is embarrassing. Not catastrophic, but embarrassing. Let me explain why.
+
+## The Problem: "me" vs. "myself"
+
+When a verb or preposition refers back to the subject of the sentence, you must use a **reflexive pronoun** — not a regular object pronoun.
+
+Here is the rule in plain English:
+
+- **me** = used when someone else is doing something to you
+- **myself** = used when YOU are referring back to yourself
+
+So when you say "reminds me of **me**", you are using "me" twice in a row — once as the indirect object and once as the object of the preposition. It is not technically wrong, but it sounds awkward and unnatural. A native speaker would almost always say:
+
+> "Ne Zha 2 reminds me of **myself** when I was young."
+
+"Myself" here is a reflexive pronoun pointing back to the same person — *me*.
+
+## Reflexive Pronouns: The Full List
+
+| Regular | Reflexive |
+|---------|-----------|
+| me | myself |
+| you | yourself |
+| him | himself |
+| her | herself |
+| us | ourselves |
+| them | themselves |
+
+## More Examples
+
+> ❌ "I bought a gift for me." → ✅ "I bought a gift for myself."
+> ❌ "She reminded her of her younger days." → ✅ "She reminded herself of her younger days."
+> ❌ "He saw him in the mirror." → ✅ "He saw himself in the mirror."
+
+## Practice
+
+Fix these sentences:
+
+1. "The photo reminded me of me at age ten."
+2. "He talked to him in the mirror every morning."
+3. "We only have we to blame."
+
+**The lesson:** Every time you refer back to the same person in a sentence, reach for the reflexive pronoun. Your writing will instantly sound more natural.
+`
+  },
+
+  {
     id: "lesson-003",
     date: "2026-06-18",
     title: "Condolences vs. Condescending 😬",
