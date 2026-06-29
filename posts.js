@@ -22,6 +22,79 @@ const SITE = {
 const POSTS = [
 
   {
+    id: "lesson-005",
+    date: "2026-06-28",
+    title: "\"Techno Prodigy\" — Two Words, Two Mistakes 😬",
+    level: "Intermediate",
+    image: "images/techno.png",
+    imageAlt: "Screenshot of Will Fan's bio describing himself as a Techno Prodigy",
+    excerpt: "I called myself a \"Techno Prodigy\" in my bio. Turns out I got BOTH words wrong.",
+    content: `
+## What I Wrote
+
+For a long time, my bio described me as a:
+
+> "Techno Prodigy"
+
+I thought it sounded impressive. Then I learned that *both* words were the wrong choice. Let me explain.
+
+## Mistake 1: "Techno" ≠ "Technology"
+
+I wanted a short word for **technology**. But "techno" is not a shortcut for that!
+
+**Techno** *(noun)*
+- Meaning: a style of electronic dance music (EDM) with a fast, repetitive beat
+- Example: "We danced to techno all night at the club."
+
+So "Techno Prodigy" sounds like I am a brilliant *DJ*, not a tech expert! 😅
+
+If you want to talk about computers, gadgets, and innovation, use:
+
+- **tech** — the casual short form ("a tech company", "a tech expert")
+- **technology** — the full, formal word
+
+> ❌ "I am a techno visionary."
+> ✅ "I am a tech visionary."
+
+**Quick tip:** *techno* = music you dance to. *tech* = phones, computers, software.
+
+## Mistake 2: "Prodigy" Is for Children
+
+A **prodigy** is a *young* person with amazing talent — think of a 7-year-old who plays piano like a master.
+
+**Prodigy** *(noun)*
+- Meaning: a young person with exceptional abilities
+- Example: "Mozart was a child prodigy who composed music at age five."
+
+The key idea is **youth**. I am almost 40 years old! Calling myself a prodigy sounds strange — and a little boastful — because the word simply does not fit an adult.
+
+For an experienced adult, better words are:
+
+- **expert** — someone with deep knowledge and skill
+- **veteran** — someone with many years of experience
+- **leader** / **pioneer** — someone ahead of others in their field
+
+> ❌ "I am a 39-year-old tech prodigy."
+> ✅ "I am a tech expert." / "I am a technology leader."
+
+## How to Remember
+
+- **techno** → think of a **dance club** 🎶 (not what I meant!)
+- **prodigy** → think of a **gifted child** 👶 (not a grown adult)
+
+## Practice
+
+Choose the better word:
+
+1. "She is a 45-year-old software ( prodigy / expert )."
+2. "He loves listening to ( techno / tech ) at the gym."
+3. "Our company builds amazing ( techno / technology )."
+
+**The lesson:** A fancy word is only impressive if it means what you think it means. When in doubt, choose the simple, accurate word over the flashy one.
+`
+  },
+
+  {
     id: "lesson-004",
     date: "2026-06-22",
     title: "\"Reminds me of me\" — Really? 😬",
