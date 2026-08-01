@@ -22,6 +22,89 @@ const SITE = {
 const POSTS = [
 
   {
+    id: "lesson-006",
+    date: "2026-07-31",
+    title: "One Sentence, Four Mistakes 😱",
+    level: "Intermediate",
+    image: "images/post3.png",
+    imageAlt: "Tweet where Will Fan wrote: I always thought things last forever, continue and or will come back. Not the case anymore, it will just happen once a chance.",
+    excerpt: "I tried to write something deep and philosophical. Instead I wrote a sentence with FOUR errors. Let's dissect it.",
+    content: `
+## What I Wrote
+
+I was in a reflective mood, so I posted this:
+
+> "I always thought things last forever, continue and or will come back. Not the case anymore, it will just happen once a chance."
+
+I wanted it to sound wise. Instead, the grammar collapsed under the weight of my feelings. There are **four** mistakes packed into these two short sentences. Let's be tough on them one by one — this is how we learn.
+
+## Mistake 1: "I always thought things last forever" — Wrong Tense
+
+When the main verb is in the **past** ("I thought"), the verb that follows must shift into the past too. This is called **backshifting** in reported thoughts.
+
+And since I was talking about a *belief about the future* that turned out to be wrong, the natural choice is **would**:
+
+> ❌ "I always thought things **last** forever."
+> ✅ "I always thought things **would last** forever."
+
+**The rule:** thought + would = a past belief about the future.
+
+- "I thought it **would rain**." (it didn't)
+- "She thought he **would call**." (he didn't)
+
+## Mistake 2: "continue and or will come back" — "and or" Is Not a Phrase
+
+I mashed two conjunctions together. In writing, **"and/or"** exists (with a slash), but it belongs in legal contracts — never in a heartfelt post. Worse, my three verbs were not **parallel**: *last* (present), *continue* (present), *will come back* (future). A list must keep the same form:
+
+> ❌ "things last forever, continue and or will come back"
+> ✅ "things would last forever, continue, or come back"
+
+**The rule:** in a list, every verb wears the same uniform. Pick one tense and dress all of them in it.
+
+## Mistake 3: "Not the case anymore" — Sentence Fragment
+
+This has no subject and no verb — it's a **fragment**. In casual speech it can pass, but in writing it reads as broken, not stylish:
+
+> ❌ "Not the case anymore."
+> ✅ "That's not the case anymore." / "That's no longer true."
+
+**Tip:** if a "sentence" cannot answer *what is not the case?* by itself, it's a fragment.
+
+## Mistake 4: "it will just happen once a chance" — Word Salad
+
+This is the worst one. **"Once a chance" simply does not exist in English.** I think my brain merged two different ideas mid-sentence:
+
+- "things only happen **once**"
+- "you only get **one chance**"
+
+I typed both at the same time and produced neither. Also, "it" has no clear owner — *what* will happen once? Say what you mean:
+
+> ❌ "it will just happen once a chance"
+> ✅ "everything happens only once"
+> ✅ "you only get one chance"
+
+**The lesson inside the lesson:** when a sentence feels wrong, don't glue two half-sentences together. Delete it and write ONE clear idea.
+
+## The Full Repair
+
+> ❌ "I always thought things last forever, continue and or will come back. Not the case anymore, it will just happen once a chance."
+> ✅ "I always thought things would last forever, continue, or come back someday. That's not the case anymore — everything happens only once, and you only get one chance."
+
+Same emotion. Actual English.
+
+## Practice
+
+Fix these sentences:
+
+1. "I thought the store stays open late." *(backshift the tense)*
+2. "She likes reading, swimming and or will travel." *(fix the list)*
+3. "Not a problem anymore." *(complete the fragment)*
+
+**The lesson:** deep thoughts deserve clean grammar. If the sentence is broken, the reader feels the confusion — not the emotion. Write the feeling in short, correct sentences first; add poetry later.
+`
+  },
+
+  {
     id: "lesson-005",
     date: "2026-06-28",
     title: "\"Techno Prodigy\" — Two Words, Two Mistakes 😬",
